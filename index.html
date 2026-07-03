@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leonel Vieira Advocacia e Consultoria Jurídica - Especialistas em Direito Tributário e Previdenciário em Paço do Lumiar, Maranhão. Planejamento tributário, recuperação de créditos e benefícios previdenciários.">
+    <meta name="keywords" content="advogado tributarista, advogado tributário, recuperação de créditos tributários, planejamento tributário, direito tributário, advogado previdenciário, planejamento previdenciário, benefícios previdenciários, consultoria tributária, Paço do Lumiar, Maranhão">
+    <meta name="author" content="Leonel Vieira Advocacia e Consultoria Jurídica">
+    <meta property="og:title" content="Leonel Vieira Advocacia - Segurança Jurídica e Estratégica">
+    <meta property="og:description" content="Especialistas em Direito Tributário e Previdenciário. Soluções jurídicas estratégicas para empresas e pessoas físicas em Paço do Lumiar - MA.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* === RESET & BASE === */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-deepest: #050D17;
+            --navy-dark: #08121F;
+            --navy-primary: #081F3A;
+            --navy-accent: #0F1B2B;
+            --gold: #C9A961;
+            --gold-light: #D4B97A;
+            --gold-dark: #B8944F;
+            --white: #FFFFFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-300: #DEE2E6;
+            --gray-400: #ADB5BD;
+            --gray-500: #6C757D;
+            --gray-600: #495057;
+            --gray-700: #343A40;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--gray-300);
+            line-height: 1.6;
+            background: var(--navy-deepest);
+            overflow-x: hidden;
+        }
+
+        /* === TYPOGRAPHY === */
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+
+        p {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--gray-600);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* === UTILITIES === */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray-400);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy-deepest);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--navy-deepest);
+        }
+
+        /* === HEADER === */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--navy-deepest);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            filter: drop-shadow(0 2px 8px rgba(201, 169, 97, 0.3));
+            transition: var(--transition);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 12px rgba(201, 169, 97, 0.5));
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .nav {
+                display: none;
+            }
+        }
+
+        .nav a {
+            color: var(--gray-300);
+            font-weight: 500;
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav a:hover {
+            color: var(--gold);
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-whatsapp-header {
+            background: #25D366;
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .btn-whatsapp-header:hover {
+            background: #20BA5A;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .nav.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--navy-deepest);
+            padding: 2rem;
+            gap: 1.5rem;
+            border-top: 1px solid rgba(201, 169, 97, 0.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* === HERO === */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--navy-deepest) 0%, var(--navy-primary) 100%);
+            overflow: hidden;
+            padding-top: 6rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--gray-300);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-logo-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .hero-logo-container img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 10px 30px rgba(201, 169, 97, 0.3));
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gray-400);
+            font-size: 0.875rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        /* === SOBRE === */
+        .sobre {
+            background: var(--navy-dark);
+        }
+
+        .sobre-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .sobre-text h2 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .sobre-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-300);
+        }
+
+        .sobre-text strong {
+            color: var(--gold);
+        }
+
+        .sobre-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .sobre-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .sobre-feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            color: var(--navy-deepest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        .sobre-feature-text h4 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .sobre-feature-text p {
+            font-size: 0.9375rem;
+            color: var(--gray-400);
+            margin: 0;
+        }
+
+        .sobre-visual {
+            position: relative;
+        }
+
+        .sobre-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .sobre-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            border-radius: 8px;
+        }
+
+        .sobre-stats {
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            background: var(--navy-primary);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Merriweather', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-400);
+            margin-top: 0.5rem;
+        }
+
+        /* === ÁREAS === */
+        .areas {
+            background: var(--navy-deepest);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .areas::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .area-card {
+            background: var(--navy-dark);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(201, 169, 97, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(201, 169, 97, 0.15);
+            border-color: var(--gold);
+        }
+
+        .area-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .area-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(201, 169, 97, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .area-icon i {
+            font-size: 1.75rem;
+            color: var(--gold);
+        }
+
+        .area-card:hover .area-icon {
+            background: var(--gold);
+        }
+
+        .area-card:hover .area-icon i {
+            color: var(--navy-deepest);
+        }
+
+        .area-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.375rem;
+        }
+
+        .area-card p {
+            color: var(--gray-400);
+            font-size: 0.9375rem;
+        }
+
+        /* === EQUIPE === */
+        .equipe {
+            background: var(--navy-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .equipe::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.04;
+            pointer-events: none;
+        }
+
+        .equipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .equipe-card {
+            text-align: center;
+        }
+
+        .equipe-photo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--navy-primary), var(--navy-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--gold);
+            box-shadow: 0 8px 32px rgba(201, 169, 97, 0.2);
+        }
+
+        .equipe-photo i {
+            font-size: 5rem;
+            color: rgba(201, 169, 97, 0.3);
+        }
+
+        .equipe-card h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .equipe-role {
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+        }
+
+        .equipe-bio {
+            color: var(--gray-400);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        /* === DEPOIMENTOS === */
+        .depoimentos {
+            background: var(--navy-deepest);
+            color: var(--white);
+        }
+
+        .depoimentos .section-header h2 {
+            color: var(--white);
+        }
+
+        .depoimentos .section-header p {
+            color: var(--gray-400);
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .depoimento-card {
+            background: var(--navy-dark);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(201, 169, 97, 0.1);
+            position: relative;
+        }
+
+        .depoimento-quote {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.2;
+            font-family: 'Merriweather', serif;
+        }
+
+        .depoimento-stars {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .depoimento-text {
+            color: var(--gray-300);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .depoimento-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .depoimento-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: var(--navy-deepest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .depoimento-info .name {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .depoimento-info .role {
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+
+        /* === FAQ === */
+        .faq {
+            background: var(--navy-dark);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--navy-primary);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(201, 169, 97, 0.1);
+            border-color: rgba(201, 169, 97, 0.3);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem;
+            text-align: left;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--gold);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--gold-light);
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--gray-400);
+            line-height: 1.8;
+        }
+
+        /* === CONTATO === */
+        .contato {
+            background: var(--navy-deepest);
+        }
+
+        .contato-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .contato-info h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .contato-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contato-item-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            color: var(--navy-deepest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contato-item-text h4 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contato-item-text p {
+            color: var(--gray-400);
+            font-size: 0.9375rem;
+            margin: 0;
+        }
+
+        .contato-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contato-social a {
+            width: 50px;
+            height: 50px;
+            background: var(--navy-primary);
+            color: var(--gray-300);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+        }
+
+        .contato-social a:hover {
+            background: var(--gold);
+            color: var(--navy-deepest);
+            transform: translateY(-4px);
+        }
+
+        .contato-form {
+            background: var(--navy-dark);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(201, 169, 97, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(201, 169, 97, 0.2);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--navy-primary);
+            color: var(--gray-300);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: var(--navy-primary);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--gray-500);
+        }
+
+        .form-group select option {
+            background: var(--navy-primary);
+            color: var(--gray-300);
+        }
+
+        .form-error {
+            color: #ff6b6b;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .form-group.error .form-error {
+            display: block;
+        }
+
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: #ff6b6b;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--gold);
+            color: var(--navy-deepest);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-submit:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 169, 97, 0.3);
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--navy-deepest);
+            color: var(--gray-400);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            text-align: center;
+        }
+
+        .footer-brand .logo {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: var(--navy-dark);
+            color: var(--gray-400);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy-deepest);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 169, 97, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        /* === WHATSAPP FLOAT === */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        /* === BACK TO TOP === */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--navy-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 998;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: var(--gold);
+            color: var(--navy-deepest);
+            transform: translateY(-4px);
+        }
+
+        /* === MODAL === */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--navy-dark);
+            color: var(--gray-300);
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            padding: 3rem;
+            position: relative;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--gray-400);
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            color: var(--gold);
+        }
+
+        .modal-content h2 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content h3 {
+            color: var(--gold);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+            color: var(--gray-400);
+        }
+
+        .modal-content strong {
+            color: var(--gold);
+        }
+
+        .modal-content ul {
+            color: var(--gray-400);
+        }
+
+        /* === ANIMATIONS === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 1024px) {
+            .header-cta .btn-whatsapp-header {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero-container,
+            .sobre-content,
+            .contato-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.375rem; }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .sobre-features {
+                grid-template-columns: 1fr;
+            }
+
+            .sobre-stats {
+                position: static;
+                margin-top: 2rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contato-form {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .logo-text .name {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.9375rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#inicio" class="logo">
+                <img src="logo.png" alt="Leonel Vieira Advocacia Logo">
+                <div class="logo-text">
+                    <span class="name">LEONEL VIEIRA</span>
+                    <span class="tagline">Advocacia & Consultoria</span>
+                </div>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#areas">Áreas de Atuação</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <div class="header-cta">
+                <a href="https://wa.me/5598984839675?text=Olá! Gostaria de agendar uma consulta." class="btn-whatsapp-header" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Agende pelo WhatsApp
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Direito Tributário & Previdenciário
+                </div>
+                <h1>Segurança Jurídica para Proteger seu <span class="highlight">Patrimônio</span> e seus <span class="highlight">Direitos</span></h1>
+                <p class="hero-description">Especialistas em Direito Tributário e Direito Previdenciário, oferecendo soluções jurídicas estratégicas para empresas, empresários, profissionais liberais e pessoas físicas.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5598984839675?text=Olá! Gostaria de agendar uma consulta." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Agende agora pelo WhatsApp
+                    </a>
+                    <a href="#contato" class="btn btn-secondary">
+                        <i class="fas fa-user-tie"></i> Fale com um especialista
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="hero-logo-container">
+                    <img src="logo.png" alt="Leonel Vieira Advocacia - Direito Tributário e Previdenciário">
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Role para baixo</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre section" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text fade-in">
+                    <h2>Conhecimento Jurídico, Estratégia e Atendimento Personalizado</h2>
+                    <p>Na <strong>Leonel Vieira Advocacia e Consultoria Jurídica</strong>, atuamos de forma estratégica para oferecer soluções eficientes em Direito Tributário e Direito Previdenciário.</p>
+                    <p>Cada cliente recebe atendimento individualizado, baseado em análise técnica aprofundada, ética profissional e compromisso com resultados.</p>
+                    <p>Nosso objetivo é proporcionar segurança jurídica, reduzir riscos, recuperar créditos tributários e defender os direitos de nossos clientes perante os órgãos fiscais e o Poder Judiciário.</p>
+                    <div class="sobre-features">
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h4>Atendimento Personalizado</h4>
+                                <p>Cada caso é único e merece atenção dedicada</p>
+                            </div>
+                        </div>
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h4>Estratégia Jurídica</h4>
+                                <p>Soluções pensadas para sua realidade</p>
+                            </div>
+                        </div>
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h4>Segurança Jurídica</h4>
+                                <p>Proteção sólida para seus direitos</p>
+                            </div>
+                        </div>
+                        <div class="sobre-feature">
+                            <div class="sobre-feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="sobre-feature-text">
+                                <h4>Compromisso com Resultados</h4>
+                                <p>Foco em soluções eficazes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-visual fade-in">
+                    <div class="sobre-image">
+                        <img src="escritorio.jpg" alt="Escritório de advocacia moderno com mesa e estantes de livros" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 0; border-radius: 8px;">
+                    </div>
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Comprometimento</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Áreas de Atuação</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Especializações</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">MA</div>
+                            <div class="stat-label">Paço do Lumiar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="areas section" id="areas">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Áreas de Atuação</h2>
+                <p>Soluções jurídicas especializadas para proteger seus interesses e patrimônio</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Direito Tributário</h3>
+                    <p>Consultoria especializada para empresas e pessoas físicas em questões tributárias, com análise aprofundada e soluções eficientes.</p>
+                </div>
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Recuperação de Créditos Tributários</h3>
+                    <p>Análise detalhada para identificar tributos pagos indevidamente e buscar sua restituição ou compensação junto aos órgãos competentes.</p>
+                </div>
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Planejamento Tributário</h3>
+                    <p>Estratégias legais para redução da carga tributária e prevenção de riscos fiscais, com total conformidade com a legislação.</p>
+                </div>
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Direito Previdenciário</h3>
+                    <p>Atuação em benefícios previdenciários, aposentadorias, revisões, pensões e auxílio-doença, defendendo seus direitos.</p>
+                </div>
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Planejamento Previdenciário</h3>
+                    <p>Organização da vida contributiva visando maior segurança e melhor benefício futuro para você e sua família.</p>
+                </div>
+                <div class="area-card fade-in">
+                    <div class="area-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Defesa Fiscal</h3>
+                    <p>Representação em processos administrativos e judiciais tributários, com estratégia e segurança jurídica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="equipe section" id="equipe">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nossa Equipe</h2>
+                <p>Profissionais qualificados e comprometidos com a excelência jurídica</p>
+            </div>
+            <div class="equipe-grid">
+                <div class="equipe-card fade-in">
+                    <div class="equipe-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Dr. Leonel Vieira</h3>
+                    <div class="equipe-role">Advogado Tributarista</div>
+                    <p class="equipe-bio">Especialista em Direito Tributário e Previdenciário, com atuação estratégica em planejamento tributário, recuperação de créditos e defesa fiscal. Comprometido com soluções jurídicas eficientes e personalizadas.</p>
+                </div>
+                <div class="equipe-card fade-in">
+                    <div class="equipe-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Equipe Jurídica</h3>
+                    <div class="equipe-role">Consultores Especializados</div>
+                    <p class="equipe-bio">Profissionais qualificados em diversas áreas do Direito, trabalhando em conjunto para oferecer atendimento completo e soluções integradas para nossos clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos section" id="depoimentos">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>O Que Nossos Clientes Dizem</h2>
+                <p>A confiança dos nossos clientes é o nosso maior patrimônio</p>
+            </div>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-quote">"</div>
+                    <div class="depoimento-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-text">Atendimento excepcional e muito profissional. A equipe do Dr. Leonel Vieira foi fundamental para a recuperação dos créditos tributários da minha empresa.</p>
+                    <div class="depoimento-author">
+                        <div class="depoimento-avatar">M</div>
+                        <div class="depoimento-info">
+                            <div class="name">M. Silva</div>
+                            <div class="role">Empresário</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-quote">"</div>
+                    <div class="depoimento-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-text">Planejamento tributário impecável. Reduziram significativamente nossa carga fiscal dentro da legalidade. Recomendo a todos os empresários.</p>
+                    <div class="depoimento-author">
+                        <div class="depoimento-avatar">R</div>
+                        <div class="depoimento-info">
+                            <div class="name">R. Oliveira</div>
+                            <div class="role">Profissional Liberal</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <div class="depoimento-quote">"</div>
+                    <div class="depoimento-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="depoimento-text">Consegui minha aposentadoria com o planejamento previdenciário correto. Atendimento humano, transparente e de altíssima qualidade técnica.</p>
+                    <div class="depoimento-author">
+                        <div class="depoimento-avatar">A</div>
+                        <div class="depoimento-info">
+                            <div class="name">A. Santos</div>
+                            <div class="role">Pessoa Física</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tire suas dúvidas sobre nossos serviços</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Como funciona a recuperação de créditos tributários?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Realizamos uma análise detalhada de todos os tributos pagos pela sua empresa nos últimos anos. Identificamos valores pagos indevidamente ou a maior e buscamos a restituição ou compensação junto aos órgãos competentes, sempre dentro da legalidade.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Quem pode fazer planejamento tributário?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Empresas de todos os portes, empresários, profissionais liberais e até pessoas físicas podem se beneficiar do planejamento tributário. O objetivo é reduzir legalmente a carga tributária e prevenir riscos fiscais, utilizando estratégias previstas em lei.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Quais benefícios previdenciários vocês atendem?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Atuamos em todos os tipos de benefícios previdenciários, incluindo aposentadorias (por idade, tempo de contribuição, especial), revisões de benefícios, pensões por morte, auxílio-doença, auxílio-acidente e BPC/LOAS.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>O atendimento pode ser realizado online?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Sim, oferecemos atendimento online por videoconferência para sua comodidade. Mantemos a mesma qualidade e atenção do atendimento presencial, permitindo que clientes de qualquer localidade possam acessar nossos serviços jurídicos especializados.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        <span>Como agendar uma consulta?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Você pode agendar sua consulta de forma rápida e prática pelo nosso WhatsApp (98) 98483-9675, ou preenchendo o formulário de contato em nosso site. Nossa equipe retornará o mais breve possível para confirmar seu agendamento.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contato section" id="contato">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para atender você</p>
+            </div>
+            <div class="contato-content">
+                <div class="contato-info fade-in">
+                    <h3>Informações de Contato</h3>
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="contato-item-text">
+                            <h4>Escritório</h4>
+                            <p>Leonel Vieira Advocacia e Consultoria Jurídica</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contato-item-text">
+                            <h4>Localização</h4>
+                            <p>Paço do Lumiar – MA</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contato-item-text">
+                            <h4>WhatsApp</h4>
+                            <p>(98) 98483-9675</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contato-item-text">
+                            <h4>E-mail</h4>
+                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b575e54155a5f4d090e09030d7b544e4f5754545015585456">[email&#160;protected]</a></p>
+                        </div>
+                    </div>
+                    <div class="contato-social">
+                        <a href="https://wa.me/5598984839675" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#3c505953125d584a0e090e040a7c53494850535357125f5351" aria-label="E-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contato-form fade-in" id="contactForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <div class="form-error">Por favor, insira seu nome</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-error">Por favor, insira um e-mail válido</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(98) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione um assunto</option>
+                            <option value="Direito Tributário">Direito Tributário</option>
+                            <option value="Recuperação de Créditos">Recuperação de Créditos</option>
+                            <option value="Planejamento Tributário">Planejamento Tributário</option>
+                            <option value="Direito Previdenciário">Direito Previdenciário</option>
+                            <option value="Planejamento Previdenciário">Planejamento Previdenciário</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                        <div class="form-error">Por favor, insira sua mensagem</div>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Leonel Vieira Advocacia Logo" style="height: 100px; width: auto; margin: 0 auto 1.5rem; display: block; filter: drop-shadow(0 2px 8px rgba(201, 169, 97, 0.3));">
+                    <h3>Leonel Vieira Advocacia</h3>
+                    <p>Soluções jurídicas estratégicas em Direito Tributário e Previdenciário para proteger seus direitos e seu patrimônio.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/5598984839675" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="/cdn-cgi/l/email-protection#7e121b11501f1a084c4b4c46483e110b0a12111115501d1113" aria-label="E-mail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#areas">Áreas de Atuação</a></li>
+                        <li><a href="#equipe">Equipe</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Áreas de Atuação</h4>
+                    <ul>
+                        <li><a href="#areas">Direito Tributário</a></li>
+                        <li><a href="#areas">Recuperação de Créditos</a></li>
+                        <li><a href="#areas">Planejamento Tributário</a></li>
+                        <li><a href="#areas">Direito Previdenciário</a></li>
+                        <li><a href="#areas">Planejamento Previdenciário</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5598984839675" target="_blank" rel="noopener">(98) 98483-9675</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#3f535a50115e5b490d0a0d07097f504a4b53505054115c5052"><span class="__cf_email__" data-cfemail="e38f868ccd828795d1d6d1dbd5a38c96978f8c8c88cd808c8e">[email&#160;protected]</span></a></li>
+                        <li><a href="#contato">Paço do Lumiar – MA</a></li>
+                        <li><a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener">@leonel.vieira.adv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Leonel Vieira Advocacia e Consultoria Jurídica. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8125rem;">
+                    <a href="#" id="privacyPolicyLink" style="color: var(--gold);">Política de Privacidade</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5598984839675?text=Olá! Gostaria de agendar uma consulta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- PRIVACY MODAL -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Política de Privacidade</h2>
+            <p><strong>Leonel Vieira Advocacia e Consultoria Jurídica</strong></p>
+            <p><strong>Última atualização:</strong> Janeiro de 2025</p>
+            <p>A sua privacidade é importante para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações pessoais quando você utiliza nossos serviços.</p>
+            <h3>1. Informações que Coletamos</h3>
+            <p>Podemos coletar informações pessoais quando você:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Entra em contato conosco através do formulário</li>
+                <li>Agenda uma consulta</li>
+                <li>Comunica-se conosco por WhatsApp ou e-mail</li>
+            </ul>
+            <p>As informações podem incluir: nome, e-mail, telefone e detalhes sobre sua necessidade jurídica.</p>
+            <h3>2. Como Usamos Suas Informações</h3>
+            <p>Utilizamos suas informações para:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Responder às suas solicitações</li>
+                <li>Prestar serviços jurídicos</li>
+                <li>Enviar comunicações relacionadas aos nossos serviços</li>
+                <li>Cumprir obrigações legais</li>
+            </ul>
+            <h3>3. Proteção de Dados</h3>
+            <p>Adotamos medidas técnicas e organizacionais adequadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+            <h3>4. Compartilhamento de Informações</h3>
+            <p>Não vendemos, trocamos ou transferimos suas informações pessoais para terceiros, exceto quando necessário para prestação dos serviços jurídicos ou por exigência legal.</p>
+            <h3>5. Seus Direitos</h3>
+            <p>Você tem direito a:</p>
+            <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li>Acessar suas informações pessoais</li>
+                <li>Solicitar correção de dados incorretos</li>
+                <li>Solicitar exclusão de seus dados</li>
+                <li>Revogar o consentimento a qualquer momento</li>
+            </ul>
+            <h3>6. Contato</h3>
+            <p>Para questões relacionadas à privacidade ou para exercer seus direitos, entre em contato:</p>
+            <p><strong>E-mail:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78141d1756191c0e4a4d4a404e38170d0c14171713561b1715">[email&#160;protected]</a><br>
+            <strong>WhatsApp:</strong> (98) 98483-9675</p>
+            <h3>7. Alterações nesta Política</h3>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente. Recomendamos que você revise esta página regularmente para se manter informado sobre como protegemos suas informações.</p>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // === SMOOTH SCROLL ===
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    const nav = document.getElementById('nav');
+                    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                    nav.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // === MOBILE MENU ===
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const nav = document.getElementById('nav');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // === HEADER SCROLL EFFECT ===
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // === FADE IN ANIMATION ===
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // === FAQ ACCORDION ===
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // === FORM VALIDATION ===
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+            const nome = document.getElementById('nome');
+            const email = document.getElementById('email');
+            const mensagem = document.getElementById('mensagem');
+
+            // Reset errors
+            document.querySelectorAll('.form-group').forEach(group => {
+                group.classList.remove('error');
+            });
+
+            // Validate nome
+            if (nome.value.trim() === '') {
+                nome.parentElement.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                email.parentElement.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate mensagem
+            if (mensagem.value.trim() === '') {
+                mensagem.parentElement.classList.add('error');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Get form data
+                const formData = new FormData(contactForm);
+                const nomeValue = formData.get('nome');
+                const emailValue = formData.get('email');
+                const telefoneValue = formData.get('telefone');
+                const assuntoValue = formData.get('assunto');
+                const mensagemValue = formData.get('mensagem');
+
+                // Create WhatsApp message
+                const whatsappMessage = `Olá! Meu nome é ${nomeValue}.%0A%0AE-mail: ${emailValue}%0ATelefone: ${telefoneValue}%0AAssunto: ${assuntoValue}%0A%0AMensagem: ${mensagemValue}`;
+
+                // Open WhatsApp
+                window.open(`https://wa.me/5598984839675?text=${whatsappMessage}`, '_blank');
+
+                // Reset form
+                contactForm.reset();
+
+                // Show success message (optional)
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            }
+        });
+
+        // === PHONE MASK ===
+        const telefoneInput = document.getElementById('telefone');
+
+        telefoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
+
+            if (value.length > 6) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+            } else if (value.length > 2) {
+                value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+            } else if (value.length > 0) {
+                value = `(${value}`;
+            }
+
+            e.target.value = value;
+        });
+
+        // === BACK TO TOP ===
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // === PRIVACY MODAL ===
+        const privacyModal = document.getElementById('privacyModal');
+        const privacyPolicyLink = document.getElementById('privacyPolicyLink');
+        const modalClose = document.getElementById('modalClose');
+
+        privacyPolicyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            privacyModal.classList.add('active');
+        });
+
+        modalClose.addEventListener('click', () => {
+            privacyModal.classList.remove('active');
+        });
+
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) {
+                privacyModal.classList.remove('active');
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && privacyModal.classList.contains('active')) {
+                privacyModal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
