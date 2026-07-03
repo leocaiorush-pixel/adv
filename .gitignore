@@ -1,0 +1,33 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Arquivos sensíveis (nunca commitar)
+.env
+.env.local
+*.key
+*.pem
+credentials.json
+
+# Dependências
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build
+dist/
+build/
