@@ -1,0 +1,105 @@
+# ============================================
+# LEONEL VIEIRA ADVOCACIA - CONFIGURAÇÕES
+# ============================================
+
+# Ativar Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Forçar HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Remover www (opcional - comente se quiser manter www)
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+    
+    # Página inicial personalizada
+    DirectoryIndex index.html
+</IfModule>
+
+# ============================================
+# COMPRESSÃO GZIP - MELHOR PERFORMANCE
+# ============================================
+<IfModule mod_deflate.c>
+    # Comprimir texto, HTML, JavaScript, CSS, XML
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ============================================
+# CACHE DE NAVEGADOR - PERFORMANCE
+# ============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imagens
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS e JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # HTML
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ============================================
+# SEGURANÇA
+# ============================================
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Proteger arquivos sensíveis
+<FilesMatch "\.(env|log|sql|bak|cache|ini)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ============================================
+# MIME TYPES
+# ============================================
+<IfModule mod_mime.c>
+    AddType application/font-woff .woff
+    AddType application/font-woff2 .woff2
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+    AddType application/javascript .js
+    AddType text/css .css
+</IfModule>
+
+# ============================================
+# ERROS PERSONALIZADOS
+# ============================================
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+ErrorDocument 500 /index.html
+
+# ============================================
+# OTIMIZAÇÕES ADICIONAIS
+# ============================================
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+ServerSignature Off
