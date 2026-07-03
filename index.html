@@ -1761,7 +1761,7 @@
                         </div>
                         <div class="contato-item-text">
                             <h4>E-mail</h4>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b575e54155a5f4d090e09030d7b544e4f5754545015585456">[email&#160;protected]</a></p>
+                            <p><span class="email-display" data-u="leo.adv25286" data-d="outlook.com"></span></p>
                         </div>
                     </div>
                     <div class="contato-social">
@@ -1771,7 +1771,7 @@
                         <a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="/cdn-cgi/l/email-protection#3c505953125d584a0e090e040a7c53494850535357125f5351" aria-label="E-mail">
+                        <a href="#" class="email-link" data-u="leo.adv25286" data-d="outlook.com" aria-label="E-mail">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -1831,7 +1831,7 @@
                         <a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="/cdn-cgi/l/email-protection#7e121b11501f1a084c4b4c46483e110b0a12111115501d1113" aria-label="E-mail">
+                        <a href="#" class="email-link" data-u="leo.adv25286" data-d="outlook.com" aria-label="E-mail">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
@@ -1860,7 +1860,7 @@
                     <h4>Contato</h4>
                     <ul>
                         <li><a href="https://wa.me/5598984839675" target="_blank" rel="noopener">(98) 98483-9675</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#3f535a50115e5b490d0a0d07097f504a4b53505054115c5052"><span class="__cf_email__" data-cfemail="e38f868ccd828795d1d6d1dbd5a38c96978f8c8c88cd808c8e">[email&#160;protected]</span></a></li>
+                        <li><a href="#" class="email-link" data-u="leo.adv25286" data-d="outlook.com"><span class="email-display" data-u="leo.adv25286" data-d="outlook.com"></span></a></li>
                         <li><a href="#contato">Paço do Lumiar – MA</a></li>
                         <li><a href="https://instagram.com/leonel.vieira.adv" target="_blank" rel="noopener">@leonel.vieira.adv</a></li>
                     </ul>
@@ -1923,14 +1923,14 @@
             </ul>
             <h3>6. Contato</h3>
             <p>Para questões relacionadas à privacidade ou para exercer seus direitos, entre em contato:</p>
-            <p><strong>E-mail:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="78141d1756191c0e4a4d4a404e38170d0c14171713561b1715">[email&#160;protected]</a><br>
+            <p><strong>E-mail:</strong> <span class="email-display" data-u="leo.adv25286" data-d="outlook.com"></span><br>
             <strong>WhatsApp:</strong> (98) 98483-9675</p>
             <h3>7. Alterações nesta Política</h3>
             <p>Podemos atualizar esta Política de Privacidade periodicamente. Recomendamos que você revise esta página regularmente para se manter informado sobre como protegemos suas informações.</p>
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // === SMOOTH SCROLL ===
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -2095,6 +2095,34 @@
 
             e.target.value = value;
         });
+
+        // === EMAIL PROTECTION ===
+        function buildEmails() {
+            // Text displays
+            document.querySelectorAll('.email-display').forEach(el => {
+                const u = el.getAttribute('data-u');
+                const d = el.getAttribute('data-d');
+                if (u && d) {
+                    el.textContent = u + '@' + d;
+                }
+            });
+            
+            // Mailto links
+            document.querySelectorAll('.email-link').forEach(el => {
+                const u = el.getAttribute('data-u');
+                const d = el.getAttribute('data-d');
+                if (u && d) {
+                    el.href = 'mail' + 'to:' + u + '@' + d;
+                }
+            });
+        }
+        
+        // Run when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', buildEmails);
+        } else {
+            buildEmails();
+        }
 
         // === BACK TO TOP ===
         const backToTopBtn = document.getElementById('backToTop');
